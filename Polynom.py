@@ -4,8 +4,7 @@
 # Institut Villebon,                       #
 # TP Calcul du polynome                    #
 # caractéristique d'une matrice            #
-# Auteur : TRAN Terrence                   #
-# Date de création : 26/09/16               #
+# Date de création : 26/09/16              #
 # Date de dernire modification : 28/10/16  #
 ############################################
 from Monom import *
