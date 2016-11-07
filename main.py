@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 ############################################
 # Institut Villebon,                       #
 # TP Calcul du polynome                    #
@@ -59,7 +60,7 @@ def soust(A, B):
 if __name__ == "__main__":
     print("\n---Exemple daddition :---")
     A = Matrix(([1, 3], [5, 0]))
-    B = Matrix(([0, 3],[5, 1,2]))
+    B = Matrix(([0, 3],[5, 2]))
     print("A :")
     print(A)
     print("B :")
