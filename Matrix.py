@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 class Matrix():
 
@@ -80,16 +81,7 @@ class Matrix():
         return trace
 
     def multiply(self, scalaire):
-        """multiplie la matrice par un scalaire
-        Auteur : Terrence
-        >>>A = Matrix(([0, 3], 
-               [5, 0],
-               [7, 3,5]))
-        >>>A.multiply(5)
-        >>>[0, 15]
-           [25, 0]
-           [35, 15]
-        """
+        """multiplie la matrice par un scalaire"""
         for ligne in range (len(self.liste)) :
             for colonne in range(len(self.liste[0])): #Prend la taille de la première ligne
                 self.liste[ligne][colonne] *= scalaire
@@ -155,7 +147,11 @@ if __name__ == "__main__":
                 [0,5,5]))
     print (A)
     A.multiply(5)
-    print("A muliply\n " , A)
-    print("B:\n",B, "\nA + B \n", A+B )
+    print ("A muliply:") 
+    print (A)
+    print ("B:")
+    print (B) 
+    print ("A + B:") 
+    print (A+B )
    
 
