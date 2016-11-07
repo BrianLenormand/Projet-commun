@@ -37,22 +37,40 @@ class Monom:
                 if float(self.numerator)/float(self.denominator) > 0:    #On met le signe
                     strPoly += "+"
                 strPoly += str(self.numerator)   #On ajoute le coef. (Si c'est négatif, on a pas besoin de rajouter le signe -)
+                if self.numerator == 1:
+                    strPoly = strPoly.replace("+1", "+")
+                elif self.numerator == -1:
+                    strPoly = strPoly.replace("-1", "-")
+
+            elif float(self.denominator) == -1 :
+                if float(self.numerator)/float(self.denominator) > 0:    #On met le signe
+                    strPoly += "+"
+                strPoly += str(self.numerator)   #On ajoute le coef. (Si c'est négatif, on a pas besoin de rajouter le signe -)
+                if self.numerator == 1:
+                    strPoly = strPoly.replace("1", "-")
+                elif self.numerator == -1:
+                    strPoly = strPoly.replace("-1", "+")
+                    strPoly = strPoly.replace("++", "+")
+
             else:
                 if float(self.numerator)/float(self.denominator) > 0:    #On met le signe
                     strPoly += "+"
-                    strPoly += str(self.numerator) +  "/" + str(self.denominator) 
+                    strPoly += str(self.numerator) +  "/" + str(self.denominator)
+                    strPoly = strPoly.replace("-", "")
                 else:
-                    strPoly += str(self.numerator) +  "/" + str(self.denominator) 
+                    strPoly += str(self.numerator) +  "/" + str(self.denominator)
         if self.degree != 0:
            strPoly += "x^" + str(self.degree) #On ajoute la puissance de x sauf pour le dernier rang qui est un nombre.
-        return " " + strPoly
+        return strPoly
 
         
 if __name__ == "__main__":        
     m_0 = Monom(0, -3, 1)
     m_2 = Monom(2, -1, 1)
-    m_7 = Monom(7, 2, 3)
+    m_6 = Monom(6, 1, 1)
+    m_7 = Monom(7, 2, -3)
     
     print (m_7)
+    print (m_6)
     print (m_2)
     print (m_0)
